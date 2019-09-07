@@ -7,13 +7,13 @@
     "validateUpsert": true
   },
   "properties": {
-    "userId": {
+    "vinUserId": {
       "type": "number",
       "required": true
     },
     "userType": {
       "type": [
-        "number"
+        "string"
       ]
     }
   },
