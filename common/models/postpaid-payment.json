@@ -1,0 +1,29 @@
+{
+  "name": "PostpaidPayment",
+  "plural": "postpaid_payments",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "actionId": {
+      "type": "number",
+      "required": true
+    },
+    "level": {
+      "type": [
+        "number"
+      ]
+    },
+    "levelPrice": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

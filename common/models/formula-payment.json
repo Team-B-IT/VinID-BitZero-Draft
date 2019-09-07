@@ -1,0 +1,22 @@
+{
+  "name": "FormulaPayment",
+  "plural": "formula_payments",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "actionId": {
+      "type": "number",
+      "required": true
+    },
+    "formular": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,43 @@
+{
+  "name": "MachineAction",
+  "plural": "machine_actions",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "machineId": {
+      "type": "number",
+      "required": true
+    },
+    "actionName": {
+      "type": "string"
+    },
+    "valueType": {
+      "type": "string",
+      "required": true
+    },
+    "valueRange": {
+      "type": [
+        "number"
+      ]
+    },
+    "parrentId": {
+      "type": "number"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "paymentTypeId": {
+      "type": "number"
+    },
+    "information": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
