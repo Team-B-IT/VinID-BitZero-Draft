@@ -14,44 +14,15 @@
       "./mixins"
     ]
   },
-  "Ticket": {
-    "dataSource": null,
-    "public": true
-  },
-  "CustomerAction": {
-    "dataSource": null,
-    "public": true
-  },
-  "FormulaPayment": {
-    "dataSource": null,
-    "public": true
-  },
-  "ImmediatePayment": {
-    "dataSource": null,
-    "public": true
-  },
-  "Machine": {
-    "dataSource": null,
-    "public": true
-  },
-  "MachineAction": {
-    "dataSource": null,
-    "public": true
-  },
-  "PaymentType": {
-    "dataSource": null,
-    "public": true
-  },
-  "PostpaidPayment": {
-    "dataSource": null,
-    "public": true
-  },
-  "User": {
-    "dataSource": null,
-    "public": true
-  },
-  "UserType": {
-    "dataSource": null,
-    "public": true
+  "Student": {
+    "dataSource": "mysql_01",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
   }
 }

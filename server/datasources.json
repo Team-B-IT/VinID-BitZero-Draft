@@ -1,6 +1,6 @@
 {
   "mongodb": {
     "connector": "loopback-connector-mongodb",
-    "url": "mongodb://trungkien.it.98:hackathon2019@ds317808.mlab.com:17808/bitzero"
+    "url": "mongodb://bitzero:hackathon2019@ds317808.mlab.com:17808/bitzero"
   }
 }
