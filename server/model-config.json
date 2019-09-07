@@ -13,16 +13,5 @@
       "../common/mixins",
       "./mixins"
     ]
-  },
-  "Student": {
-    "dataSource": "mysql_01",
-    "public": true,
-    "options": {
-      "remoting": {
-        "sharedMethods": {
-          "*": true
-        }
-      }
-    }
   }
 }
