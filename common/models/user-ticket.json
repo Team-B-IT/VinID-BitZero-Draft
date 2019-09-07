@@ -1,6 +1,6 @@
 {
-  "name": "User",
-  "plural": "users",
+  "name": "UserTicket",
+  "plural": "user_tickets",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,10 +11,14 @@
       "type": "number",
       "required": true
     },
-    "userTypeId": {
-      "type": [
-        "number"
-      ]
+    "ticketId": {
+      "type": "number",
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "required": true,
+      "default": 0
     }
   },
   "validations": [],

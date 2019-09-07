@@ -1,12 +1,16 @@
 {
-  "name": "CustomerAction",
-  "plural": "customer_actions",
+  "name": "CustomerActionHistory",
+  "plural": "customer-action-histories",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "customerActionHistoryId": {
+      "type": "number",
+      "required": true
+    },
     "customerId": {
       "type": "number",
       "required": true
@@ -14,12 +18,19 @@
     "machineActionId": {
       "type": [
         "number"
-      ]
+      ],
+      "required": true
+    },
+    "amount": {
+      "type": [
+        "number"
+      ],
+      "required": true,
+      "default": 0
     },
     "dateCreated": {
-      "type": [
-        "date"
-      ]
+      "type": "date",
+      "required": true
     }
   },
   "validations": [],

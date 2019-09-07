@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "machineId": {
+      "type": "number",
+      "require": true
+    },
     "apiPath": {
       "type": "string",
       "required": true

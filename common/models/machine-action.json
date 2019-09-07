@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "machineActionId": {
+      "type": "number",
+      "require": true
+    },
     "machineId": {
       "type": "number",
       "required": true
@@ -23,7 +27,7 @@
         "number"
       ]
     },
-    "parrentId": {
+    "parentId": {
       "type": "number"
     },
     "amount": {

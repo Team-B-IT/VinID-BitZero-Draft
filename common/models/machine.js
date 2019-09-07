@@ -6,42 +6,54 @@ let to = require('await-to-js').to
 
 
 module.exports = function(Machine) {
-    Machine.createOrderForm = async function(machineId) {
-        let orderForm = vjson.createJson();
+    Machine.getOrderForm = async function(machineId, rootMachineActionId, history) {
+        let orderForm = vjson.createJson()
+        if (history != undefined) {
+            orderForm.history = history
+        }
         let MachineAction = app.models.MachineAction
-        let [err, actions] = await to(MachineAction.find({where: {machineId: machineId}}))
+        let [err, machineActions] = await to(MachineAction.find({where: {machineId: machineId}}))
         if (err) {
-            console.log(err)
-            vjson.addElement(orderForm, {
-                type: 'text',
-                style: 'paragraph',
-                content: 'Error when finding machine actions'
+            console.log("error when finding Machine Action", err)
+            return orderForm
+        }
+        if (rootMachineActionId == undefined) {
+            for (let i in machineActions) {
+                if (machineActions[i].parentId == undefined || machineActions[i].parentId == machineActions[i].machineActionId) {
+                    let element = vjson.actionToElement(machineActions[i]);
+                    vjson.addElement(orderForm, element)
+                }
+            }
+        } else {
+            orderForm.history.push({
+                machineActionId: rootMachineActionId
             })
-            console.log(err)
-            return orderForm;
+            for (let i in machineActions) {
+                if (machineActions[i].parentId == rootMachineActionId) {
+                    let element = vjson.actionToElement(machineActions[i]);
+                    vjson.addElement(orderForm, element)
+                }
+            }
         }
-
-        // console.log(actions)
-        let elements = []
-        let i
-        for (i in actions) {
-            let action = actions[i]
-            // console.log(action)
-            let element = vjson.actionToElement(action)
-            // console.log(element)
-            elements.push(element);
-            // console.log(elements)
-        }
-        // console.log(elements)
-        vjson.addElements(orderForm, elements)
-
         return orderForm
     }
 
     Machine.remoteMethod(
-        'createOrderForm', {
-            path: '/getOrderForm',
-            accepts: {arg: 'machineId', type: 'number', required: 'true'},
+        'getOrderForm', {
+            http: {
+                path: '/order_form',
+                verb: 'POST',
+
+            },
+            accepts: [
+                {
+                    arg: 'machine_id', type: 'number', required: 'true', http: {source: 'query'}
+                }, {
+                    arg: 'root_machine_action_id', type: 'number'
+                }, {
+                    arg: 'history', type: 'any'
+                }
+            ],
             returns: {arg: 'data', type: 'object'}
         }
     )

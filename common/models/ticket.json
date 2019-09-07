@@ -7,20 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "userId": {
-      "type": "number",
-      "required": true
-    },
     "ticketId": {
       "type": "number",
       "required": true
     },
     "actions": {
-      "type": [
-        "number"
-      ]
-    },
-    "actions_amount": {
       "type": [
         "number"
       ]

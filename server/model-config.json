@@ -18,10 +18,6 @@
     "dataSource": "mongodb",
     "public": true
   },
-  "CustomerAction": {
-    "dataSource": "mongodb",
-    "public": true
-  },
   "FormulaPayment": {
     "dataSource": "mongodb",
     "public": true
@@ -51,6 +47,14 @@
     "public": true
   },
   "UserType": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "UserTicket": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CustomerActionHistory": {
     "dataSource": "mongodb",
     "public": true
   }

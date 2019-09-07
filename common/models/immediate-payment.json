@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "immediatePaymentId": {
+      "type": "number",
+      "require": true
+    },
     "actionId": {
       "type": "number",
       "required": true

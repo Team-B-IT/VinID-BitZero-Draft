@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "paymentTypeId": {
+      "type": "number",
+      "require": true
+    },
     "paymentType": {
       "type": "string"
     }

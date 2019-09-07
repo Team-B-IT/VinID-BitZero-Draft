@@ -17,7 +17,8 @@ module.exports = {
                     "background_color": "#669999"
                 },
                 "elements": []
-            }
+            },
+            "history": []
         }
     },
     
@@ -25,20 +26,32 @@ module.exports = {
         json.metadata.elements.push(element);
     },
 
-    addElements: function(json, elements) {
-        for (i in elements) {
-            element = elements[i]
-            this.addElement(json, element);
-        }
-    },
-
     actionToElement: function(action) {
-        // console.log(action)
         var element = {}
-        element.type = 'text';
-        element.style = 'paragraph'
-        element.content = action.actionName
-        // console.log(element)
+        if (action.valueType == "number"){
+            element.type = "input"
+            element.input_type = "number"
+            element.label = action.actionName
+            element.required = true
+            element.name = action.actionName
+        }
+        else if (action.valueType == "radio"){
+            element.type = "radio"
+            element.display = "inline"
+            element.label = action.actionName
+            element.name = action.actionName
+        }
+        else if (action.valueType == "checkbox"){
+            element.type = "checkBox"
+            element.display = "inline"
+            element.label = action.actionName
+            element.name = action.actionName
+            element.options = [
+                {
+                    "label1": "option1"
+                }
+            ]
+        }
         return element
     }
 }

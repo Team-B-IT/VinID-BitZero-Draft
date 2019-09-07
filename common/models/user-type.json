@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "userTypeId": {
+      "type": "number",
+      "require": true
+    },
     "userType": {
       "type": "string"
     }
