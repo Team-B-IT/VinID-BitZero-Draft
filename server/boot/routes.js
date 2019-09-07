@@ -17,7 +17,10 @@ module.exports = function (app) {
                         "background_color": "#669999" //Background color of reset button
                     },
                     "elements": [
-                        // Form Elements   
+                        {
+                            "type": "input",
+                            
+                        }
                     ]
                 }
             }
