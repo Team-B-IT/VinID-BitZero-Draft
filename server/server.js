@@ -6,9 +6,15 @@
 'use strict';
 
 var loopback = require('loopback');
+
 var boot = require('loopback-boot');
 
+//var route = require('./boot/routes');
+
 var app = module.exports = loopback();
+
+
+//app.use(route)
 
 app.start = function() {
   // start the web server
