@@ -26,6 +26,12 @@ module.exports = {
         json.metadata.elements.push(element);
     },
 
+    addElements: function(json, elements) {
+        for (let i in elements) {
+            this.addElement(json, elements[i])
+        }
+    },
+
     actionToElement: function(action) {
         var element = {}
         if (action.valueType == "number"){
