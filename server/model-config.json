@@ -15,43 +15,43 @@
     ]
   },
   "Ticket": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "CustomerAction": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "FormulaPayment": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "ImmediatePayment": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "Machine": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "MachineAction": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "PaymentType": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "PostpaidPayment": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "User": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   },
   "UserType": {
-    "dataSource": null,
+    "dataSource": "mongodb",
     "public": true
   }
 }
