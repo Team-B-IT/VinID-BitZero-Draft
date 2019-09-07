@@ -1,7 +1,7 @@
 {
   "name": "ImmediatePayment",
   "plural": "immediate_payments",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

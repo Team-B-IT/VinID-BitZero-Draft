@@ -1,7 +1,7 @@
 {
   "name": "MachineAction",
   "plural": "machine_actions",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

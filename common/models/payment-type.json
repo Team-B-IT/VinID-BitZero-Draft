@@ -1,7 +1,7 @@
 {
   "name": "PaymentType",
   "plural": "payment_types",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

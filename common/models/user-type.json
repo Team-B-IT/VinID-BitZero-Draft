@@ -1,7 +1,7 @@
 {
   "name": "UserType",
   "plural": "user_types",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

@@ -1,7 +1,7 @@
 {
   "name": "PostpaidPayment",
   "plural": "postpaid_payments",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

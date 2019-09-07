@@ -1,7 +1,7 @@
 {
   "name": "Machine",
   "plural": "machines",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

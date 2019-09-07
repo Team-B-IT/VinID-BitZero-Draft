@@ -1,7 +1,7 @@
 {
   "name": "Ticket",
   "plural": "tickets",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true

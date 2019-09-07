@@ -1,7 +1,7 @@
 {
   "name": "FormulaPayment",
   "plural": "formula_payments",
-  "base": "Model",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
