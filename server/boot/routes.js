@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.get('/test', function (req, res) {
-        res.json({
+        return res.json({
             "data": {
                 "metadata": {
                     "app_name": "Bữa tối cho mọi ngươ",
