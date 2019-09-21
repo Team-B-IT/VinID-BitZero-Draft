@@ -30,7 +30,7 @@
     "dataSource": "mongodb",
     "public": true
   },
-  "MachineAction": {
+  "Action": {
     "dataSource": "mongodb",
     "public": true
   },
@@ -56,6 +56,18 @@
   },
   "CustomerActionHistory": {
     "dataSource": "mongodb",
+    "public": true
+  },
+  "MachineType": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": null,
+    "public": true
+  },
+  "Seller": {
+    "dataSource": null,
     "public": true
   }
 }

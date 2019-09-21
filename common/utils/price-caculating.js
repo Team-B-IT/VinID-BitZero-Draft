@@ -35,24 +35,24 @@ discountTypeCalculators = [discountType0, discountType1, discountType2, discount
 
 module.exports = async function calculatePrice(history, constraint) {
     let totalPrice = 0
-    let machineActions = []
+    let actions = []
     for (let i in history) {
-        let [err, machineAction] = await to (MachineAction.findOne({where: {machineActionId: history[i].machineActionId}}))
-        if (err || machineAction == undefined) {
+        let [err, action] = await to (Action.findOne({where: {actionId: history[i].actionId}}))
+        if (err || action == undefined) {
             console.log("error when finding Machine Action", err)
             return 0
         }
-        machineActions.push(machineAction)
+        actions.push(action)
     }
 
-    for (let i in machineActions) {
-        totalPrice += calculatePrice[machineActions.paymentType | 0](machineActions[i])
+    for (let i in actions) {
+        totalPrice += calculatePrice[actions.paymentType | 0](actions[i])
     }
 
     for (let i in discountTypeCalculators) {
-        totalPrice -= discountTypeCalculators[i](machineActions)
+        totalPrice -= discountTypeCalculators[i](actions)
     }
 
-        // totalPrice += (history[i].machineActionAmount || 1) * (machineAction.price || 0)
+        // totalPrice += (history[i].actionAmount || 1) * (action.price || 0)
     return totalPrice
 }

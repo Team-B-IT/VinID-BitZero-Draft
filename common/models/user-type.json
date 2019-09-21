@@ -11,7 +11,7 @@
       "type": "number",
       "require": true
     },
-    "userType": {
+    "userTypeName": {
       "type": "string"
     }
   },

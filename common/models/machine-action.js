@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Machineaction) {
+module.exports = function(Action) {
 
 };

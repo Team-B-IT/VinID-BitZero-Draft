@@ -1,27 +1,18 @@
 {
-  "name": "Machine",
-  "plural": "machines",
+  "name": "MachineType",
+  "plural": "machine_types",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "machineId": {
-      "type": "number",
-      "require": true
-    },
     "machineTypeId": {
       "type": "number",
-      "require": true
-    },
-    "apiUrl": {
-      "type": "string",
       "required": true
     },
-    "sellerId": {
-      "type": "number",
-      "required": true
+    "machineTypeName": {
+      "type": "string"
     }
   },
   "validations": [],

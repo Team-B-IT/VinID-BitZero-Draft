@@ -15,18 +15,20 @@
       "type": "number",
       "required": true
     },
-    "machineActionId": {
-      "type": [
-        "number"
-      ],
+    "actionId": {
+      "type": "number",
       "required": true
     },
-    "amount": {
+    "childrenActionId": {
       "type": [
         "number"
-      ],
-      "required": true,
-      "default": 0
+      ]
+    },
+    "parentActionId": {
+      "type": "number"
+    },
+    "machineId": {
+      "type": "number"
     },
     "dateCreated": {
       "type": "date",

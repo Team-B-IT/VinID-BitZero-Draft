@@ -1,5 +1,5 @@
 {
-  "name": "MachineAction",
+  "name": "Action",
   "plural": "machine_actions",
   "base": "PersistedModel",
   "idInjection": true,
@@ -7,11 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "machineActionId": {
+    "actionId": {
       "type": "number",
       "require": true
     },
-    "machineId": {
+    "machineTypeId": {
       "type": "number",
       "required": true
     },
@@ -27,17 +27,15 @@
         "number"
       ]
     },
-    "parentId": {
-      "type": "number"
+    "childrenId": {
+      "type": [
+        "number"
+      ]
     },
-    "amount": {
-      "type": "number"
-    },
-    "paymentTypeId": {
-      "type": "number"
-    },
-    "information": {
-      "type": "string"
+    "childrenRatio": {
+      "type": [
+        "number"
+      ]
     }
   },
   "validations": [],
